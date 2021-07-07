@@ -1,5 +1,5 @@
-require "./main"
+require_relative 'config/environment.rb'
 
 # run MyApp
-
-run MyApp
+puts 'config.ru'
+run ApplicationController

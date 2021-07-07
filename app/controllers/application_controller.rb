@@ -1,10 +1,8 @@
-require 'sinatra/base'
-
 class ApplicationController < Sinatra::Base
   configure do
     set :views, 'app/views'
     enable :sessions
-    #set :session_secret '3cec4b335aa3b9f3f959a9afcceda37b3'
+    set :session_secret, 'a33ac20e2af6b865a35b005c6c8df10e'
   end
   
   get '/' do

@@ -3,6 +3,10 @@ Ejecutar la aplicación desde <b>config.ru</b>:
 
     $ rackup
 
+Tareas de <b>Rakefile</b>
+
+    $ rake {task name}
+
 ---
 
 Fuentes:
@@ -13,4 +17,3 @@ Fuentes:
 + https://medium.com/@mcdowpm/how-to-build-a-sinatra-app-2ac89fd058a0
 + https://learn.co/lessons/config-ru-tutorial
 + https://github.com/jarmo/require_all
-bu

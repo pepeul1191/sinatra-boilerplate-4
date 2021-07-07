@@ -1,10 +1,15 @@
 require "./main"
+require 'securerandom'
 # Rakefile
 task default: [:clean, :build, :install]
 
 task :clean do
   puts "Cleaning packages"
   # `rm *.deb`
+end
+
+task :secret do
+  puts SecureRandom.hex(16)
 end
 
 task :run do

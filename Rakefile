@@ -17,6 +17,6 @@ end
 
 namespace :dev do
   task :start do
-    sh 'rerun rackup --dir app/controllers,app/helpers,app/models'
+    sh 'rerun rackup --dir config,app/controllers,app/helpers,app/models'
   end
 end

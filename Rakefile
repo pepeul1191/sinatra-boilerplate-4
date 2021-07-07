@@ -1,5 +1,3 @@
-require "./main"
-require 'securerandom'
 # Rakefile
 task default: [:clean, :build, :install]
 
@@ -9,7 +7,7 @@ task :clean do
 end
 
 task :secret do
-  puts SecureRandom.hex(16)
+  require 'securerandom'; puts SecureRandom.hex
 end
 
 task :run do
@@ -19,7 +17,6 @@ end
 
 namespace :dev do
   task :start do
-    puts 'hola start dev'
-    run MyApp
+    sh 'rerun rackup --dir app/controllers,app/helpers,app/models'
   end
 end

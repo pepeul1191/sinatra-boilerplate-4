@@ -7,6 +7,10 @@ Tareas de <b>Rakefile</b>
 
     $ rake {task name}
 
+Ejecutar con rerun:
+
+    $ rake dev:start
+
 ---
 
 Fuentes:

@@ -8,6 +8,10 @@ class ApplicationController < Sinatra::Base
     set :constants, CONSTANTS
   end
 
+  before do
+    headers['server'] = 'Ruby, Ubuntu'
+  end
+
   helpers Helpers
 
   def initialize(app = nil)

@@ -1,4 +1,15 @@
 class HomeController < ApplicationController
+  ['/', '/distritos', '/whatever'].each do |path|
+    before path do
+      puts 'before'
+      puts check_session_true
+    end
+  end
+
+  before '/' do
+    puts 'before2'
+  end
+
   get '/' do
     locals = {
       :title => 'Bienvenido',

@@ -27,3 +27,4 @@ Fuentes:
 + https://github.com/pepeul1191/ruby-sinatra-boilerplate-v3
 + https://www.sitepoint.com/build-a-sinatra-mvc-framework/
 + https://www.toptal.com/ruby/api-with-sinatra-and-sequel-ruby-tutorial
++ https://stackoverflow.com/questions/14486551/before-filter-in-sinatra-subapplication

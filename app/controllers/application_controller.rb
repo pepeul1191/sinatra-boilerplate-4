@@ -8,6 +8,8 @@ class ApplicationController < Sinatra::Base
     set :constants, CONSTANTS
   end
 
+  helpers Helpers
+
   def initialize(app = nil)
     super(app)
     puts "******** constructing myapp **********"

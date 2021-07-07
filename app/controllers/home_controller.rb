@@ -4,6 +4,8 @@ class HomeController < ApplicationController
       :title => 'Bienvenido',
     }
     puts settings.constants
+    puts css
+    puts HomeHelper::index_css
     erb :'home/index', :layout => :'layouts/blank', :locals => locals
   end  
 

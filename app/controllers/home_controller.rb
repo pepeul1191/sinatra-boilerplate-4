@@ -1,5 +1,8 @@
 class HomeController < ApplicationController
   get '/' do
-    erb :'home/index'
+    locals = {
+      :title => 'Bienvenido',
+    }
+    erb :'home/index', :layout => :'layouts/blank', :locals => locals
   end  
 end

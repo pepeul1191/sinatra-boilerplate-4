@@ -16,7 +16,6 @@ class HomeController < ApplicationController
       :csss => HomeHelper::index_css(settings.constants),
       :jss => HomeHelper::index_js(settings.constants),
     }
-    puts settings.constants
     erb :'home/index', :layout => :'layouts/blank', :locals => locals
   end  
 

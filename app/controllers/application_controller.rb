@@ -14,6 +14,20 @@ class ApplicationController < Sinatra::Base
 
   helpers Helpers
 
+  not_found do
+    case request.env['REQUEST_METHOD']
+    when 'GET'
+      extensions = ['css', 'js', 'png', ]
+      path = request.path.split('.')
+      if !extensions.include? path[path.length - 1]
+        redirect '/error/access/404' if request.path_info != "/error/access/404"
+      end
+    else
+      status 404
+      'Recurso no encontrado'
+    end
+  end
+
   def initialize(app = nil)
     super(app)
     puts "******** constructing myapp **********"

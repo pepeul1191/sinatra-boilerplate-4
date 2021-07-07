@@ -21,3 +21,6 @@ Fuentes:
 + https://medium.com/@mcdowpm/how-to-build-a-sinatra-app-2ac89fd058a0
 + https://learn.co/lessons/config-ru-tutorial
 + https://github.com/jarmo/require_all
++ https://github.com/alexch/rerun
++ https://stackoverflow.com/questions/8893422/how-do-i-set-a-global-variable-in-sinatra-depending-on-the-production-or-develop
++ https://stackoverflow.com/questions/41915269/new-sinatra-object-for-every-requests-but-initialize-only-called-once

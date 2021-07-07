@@ -6,6 +6,14 @@ class ApplicationController < Sinatra::Base
     set :layout, 'views/layouts'
   end
 
+  def initialize(app = nil)
+    super(app)
+    @constants = {
+      :base_url => 'http://localhost:3000/',
+    }
+    puts "******** constructing myapp **********"
+  end
+
   get '/demo' do
     'demo'
   end  

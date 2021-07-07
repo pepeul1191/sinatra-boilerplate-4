@@ -3,7 +3,7 @@ class HomeController < ApplicationController
     locals = {
       :title => 'Bienvenido',
     }
-    puts @constants
+    puts settings.constants
     erb :'home/index', :layout => :'layouts/blank', :locals => locals
   end  
 

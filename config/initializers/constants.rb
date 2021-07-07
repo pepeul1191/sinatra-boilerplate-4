@@ -1,0 +1,3 @@
+CONSTANTS = {
+  :base_url => 'http::localhost:9292/',
+}

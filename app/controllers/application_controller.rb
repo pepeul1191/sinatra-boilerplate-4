@@ -12,11 +12,6 @@ class ApplicationController < Sinatra::Base
     @constants = {
       :base_url => 'http://localhost:3000/',
     }
-    puts :public_folder
     puts "******** constructing myapp **********"
   end
-
-  get '/demo' do
-    'demo'
-  end  
 end

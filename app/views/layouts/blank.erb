@@ -7,11 +7,14 @@
   <meta name="author" content="">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title><%=title%></title>
+  <%= css(csss, settings.constants) %>
   <script type="text/javascript">
-
+    const BASE_URL = "<%= settings.constants[:base_url] %>";
+    const STATIC_URL = "<%= settings.constants[:static_url] %>";
   </script>
 </head>
 <body>
   <%= yield %>
+  <%= js(jss, settings.constants) %>
 </body>
 </html>

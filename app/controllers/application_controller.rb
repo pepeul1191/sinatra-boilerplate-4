@@ -5,7 +5,7 @@ class ApplicationController < Sinatra::Base
     set :session_secret, 'a33ac20e2af6b865a35b005c6c8df10e'
     set :layout, 'views/layouts'
     set :public_folder, File.dirname(__FILE__) + '/../../public'
-    set :constants, CONSTANTS
+    set :constants, CONSTANTS[:local]
   end
 
   before do

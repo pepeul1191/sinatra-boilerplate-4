@@ -13,10 +13,10 @@ class HomeController < ApplicationController
   get '/' do
     locals = {
       :title => 'Bienvenido',
+      :csss => HomeHelper::index_css(settings.constants),
+      :jss => HomeHelper::index_js(settings.constants),
     }
     puts settings.constants
-    puts css
-    puts HomeHelper::index_css
     erb :'home/index', :layout => :'layouts/blank', :locals => locals
   end  
 

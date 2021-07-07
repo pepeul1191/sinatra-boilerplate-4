@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   get '/' do
-    'home'
+    erb :'home/index'
   end  
 end

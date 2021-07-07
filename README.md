@@ -11,6 +11,10 @@ Ejecutar con rerun:
 
     $ rake dev:start
 
+Solucionar error con rake
+
+    $ bundle clean --force
+
 ---
 
 Fuentes:
@@ -28,3 +32,4 @@ Fuentes:
 + https://www.sitepoint.com/build-a-sinatra-mvc-framework/
 + https://www.toptal.com/ruby/api-with-sinatra-and-sequel-ruby-tutorial
 + https://stackoverflow.com/questions/14486551/before-filter-in-sinatra-subapplication
++ https://stackoverflow.com/questions/6317980/you-have-already-activated-x-but-your-gemfile-requires-y

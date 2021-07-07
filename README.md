@@ -24,3 +24,4 @@ Fuentes:
 + https://github.com/alexch/rerun
 + https://stackoverflow.com/questions/8893422/how-do-i-set-a-global-variable-in-sinatra-depending-on-the-production-or-develop
 + https://stackoverflow.com/questions/41915269/new-sinatra-object-for-every-requests-but-initialize-only-called-once
++ https://github.com/pepeul1191/ruby-sinatra-boilerplate-v3

@@ -5,10 +5,7 @@ module Helpers
       resp = []
       if constants[:static_env] == 'dev'
         resp = [
-          'bower_components/font-awesome/css/font-awesome.min',
-          'assets/css/constants',
-          'assets/css/styles',
-          'dist/my-app/styles'
+          'dist/my-app/styles',
         ]
       else
         resp = [

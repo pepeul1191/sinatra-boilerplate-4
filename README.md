@@ -15,6 +15,10 @@ Solucionar error con rake
 
     $ bundle clean --force
 
+Generar componente
+
+    $ ng generate component <nombre>
+
 ---
 
 Fuentes:

@@ -27,6 +27,10 @@
               "src/main/assets"
             ],
             "styles": [
+              "public/bower_components/bootstrap/dist/css/bootstrap.min.css",
+              "public/bower_components/font-awesome/css/font-awesome.min.css",
+              "public/assets/css/constants.css",
+              "public/assets/css/styles.css",
               "src/main/styles.css"
             ],
             "scripts": []

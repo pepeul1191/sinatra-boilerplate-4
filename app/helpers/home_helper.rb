@@ -5,10 +5,10 @@ module Helpers
       resp = []
       if constants[:static_env] == 'dev'
         resp = [
-          'bower_components/bootstrap/dist/css/bootstrap.min',
           'bower_components/font-awesome/css/font-awesome.min',
           'assets/css/constants',
           'assets/css/styles',
+          'dist/my-app/styles'
         ]
       else
         resp = [
@@ -22,10 +22,10 @@ module Helpers
       resp = []
       if constants[:static_env] == 'dev'
         resp = [
-          'bower_components/bootstrap/dist/js/bootstrap.min',
-          'bower_components/font-awesome/js/font-awesome.min',
-          'assets/js/constants',
-          'assets/js/styles',
+          'dist/my-app/runtime',
+          'dist/my-app/polyfills',
+          'dist/my-app/vendor',
+          'dist/my-app/main',
         ]
       else
         resp = [

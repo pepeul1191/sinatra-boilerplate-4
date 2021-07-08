@@ -13,6 +13,7 @@ class HomeController < ApplicationController
   get '/' do
     locals = {
       :title => 'Bienvenido',
+      :href => '/',
       :csss => HomeHelper::index_css(settings.constants),
       :jss => HomeHelper::index_js(settings.constants),
     }

@@ -3,28 +3,39 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "webpack:build": "./node_modules/.bin/webpack --mode production --optimize-minimize --config webpack.config.js",
-    "start:dev": "./node_modules/.bin/webpack --mode development --config webpack.config.js --watch & php -S localhost:8080",
-    "webpack:dev": "./node_modules/.bin/webpack --mode development --config webpack.config.js --watch",
-    "webpack:server": "./node_modules/.bin/webpack-dev-server --mode development --config webpack.config.js --watch",
-    "bower:install": "./node_modules/.bin/bower install"
+    "bower:install": "./node_modules/.bin/bower install",
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
   },
   "dependencies": {
-    "backbone": "^1.4.0",
-    "bootstrap": "^4.3.1",
-    "jquery": "^3.4.1",
-    "page": "^1.11.6",
-    "popper.js": "^1.15.0"
+    "@angular/animations": "~12.1.1",
+    "@angular/common": "~12.1.1",
+    "@angular/compiler": "~12.1.1",
+    "@angular/core": "~12.1.1",
+    "@angular/forms": "~12.1.1",
+    "@angular/platform-browser": "~12.1.1",
+    "@angular/platform-browser-dynamic": "~12.1.1",
+    "@angular/router": "~12.1.1",
+    "rxjs": "~6.6.0",
+    "tslib": "^2.2.0",
+    "zone.js": "~0.11.4"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "~12.1.1",
+    "@angular/cli": "~12.1.1",
+    "@angular/compiler-cli": "~12.1.1",
+    "@types/jasmine": "~3.6.0",
+    "@types/node": "^12.11.1",
     "bower": "^1.8.8",
-    "copy-webpack-plugin": "^5.0.4",
-    "css-loader": "^3.2.0",
-    "mini-css-extract-plugin": "^0.8.0",
-    "optimize-css-assets-webpack-plugin": "^5.0.3",
-    "style-loader": "^1.0.0",
-    "webpack": "^4.41.0",
-    "webpack-cli": "^3.3.9",
-    "webpack-dev-server": "^3.8.2"
+    "jasmine-core": "~3.7.0",
+    "karma": "~6.3.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.0.3",
+    "karma-jasmine": "~4.0.0",
+    "karma-jasmine-html-reporter": "^1.5.0",
+    "typescript": "~4.3.2"
   }
 }

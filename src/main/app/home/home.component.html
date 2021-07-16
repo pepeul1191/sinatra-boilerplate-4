@@ -1,8 +1,10 @@
 <p>home works!</p>
-<h3>{{title}}</h3>
+<h3>{{title}} - Fecha : {{dateToday}}</h3>
 <ul>
   <li *ngFor="let phone of phones">
     <span>{{phone.name}}</span>
     <p>{{phone.snippet}}</p>
   </li>
 </ul>
+<h5>Saludos a {{saludar('Pepe')}}</h5>
+<input type="text" name="" [disabled]="false" [id]="txtId" value="XD">

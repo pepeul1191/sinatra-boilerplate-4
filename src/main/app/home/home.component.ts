@@ -9,12 +9,34 @@ import { Component, OnInit } from '@angular/core';
     p{
       color:blue;
     }
+    .text-success{
+      color:green;
+    }
+    .text-danger{
+      color:red;
+    }
+    .text-special{
+      font-style: italic;
+    }
   `],
 })
 export class HomeComponent implements OnInit {
   public title = 'aprendiendo';
   public dateToday = new String();
   public txtId = 'txtName';
+  public successClass = "text-success";
+  public hasError = true;
+  public isSpecial = true;
+  public messageClass = {
+    "text-success": !this.hasError,
+    "text-danger": this.hasError,
+    "text-special": this.isSpecial,
+  };
+  public titleStyles = {
+    color: 'blue',
+    fontStyle: 'italic',
+    fontSize: '60px',
+  };
 
   public phones = [
     {

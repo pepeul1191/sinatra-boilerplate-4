@@ -48,6 +48,7 @@ class ErrorController < ApplicationController
       :jss => ErrorHelper::access_js(settings.constants),
       :error => error,
       :title => 'Error',
+      :href => '',
     }
     status status
     erb :'error/access', :layout => :'layouts/blank', :locals => locals

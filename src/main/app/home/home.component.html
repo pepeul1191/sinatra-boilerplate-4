@@ -6,5 +6,9 @@
     <p>{{phone.snippet}}</p>
   </li>
 </ul>
-<h5>Saludos a {{saludar('Pepe')}}</h5>
-<input type="text" name="" [disabled]="false" [id]="txtId" value="XD">
+<h5 class="text-success">Saludos a {{saludar('Pepe')}}</h5>
+<input [class]="[successClass, 'text-special']" type="text" name="" [disabled]="false" [id]="txtId" value="XD">
+<h4 [class.text-danger]="hasError">aprendiendo más cosas</h4>
+<h4 [ngClass]="messageClass">aprendiendo más cosas</h4>
+<h4 [style.color]="hasError ? 'red' : 'green'" [style.fontSize]="'40px'">aprendiendo más cosas</h4>
+<h4 [ngStyle]="titleStyles">aprendiendo más cosas</h4>

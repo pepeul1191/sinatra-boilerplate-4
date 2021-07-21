@@ -1,9 +1,10 @@
 <p>home works!</p>
 <h3>{{title}} - Fecha : {{dateToday}}</h3>
 <ul>
-  <li *ngFor="let phone of phones">
+  <li *ngFor="let phone of phones; index as i; first as f; last as l ">
+    <span>#{{i + 1}} {{f}}</span>
     <span>{{phone.name}}</span>
-    <p>{{phone.snippet}}</p>
+    <p>{{phone.snippet}} {{l}}</p>
   </li>
 </ul>
 <h5 class="text-success">Saludos a {{saludar('Pepe')}}</h5>
@@ -14,4 +15,18 @@
 <h4 [ngStyle]="titleStyles">aprendiendo más cosas</h4>
 <button (click)="onClick($event)" class="btn btn-success">Hola {{greeting}}</button>
 <button (click)="logMessage(myInput.value)" class="btn btn-warning">Alerta!!!</button>
+<button (click)="testConstants()" class="btn btn-info">Constantes</button>
+<label *ngIf="displayName; else elseBlock" for="">mensaje de error</label>
+<label *ngIf="displayName; then ifBlock; else elseBlock" for="">mensaje de error</label>
+<ng-template #ifBlock>
+  <h2>este es un bloque condicionalmente visible</h2>
+</ng-template>
+<ng-template #elseBlock>
+  <h2>este es un bloque condicionalmente oculto</h2>
+</ng-template>
+<div [ngSwitch]="color">
+  <div *ngSwitchCase="'red'">Has escogido color rojo</div>
+  <div *ngSwitchCase="'blue'">Has escogido color azul</div>
+  <div *ngSwitchCase="'green'">Has escogido color verde</div>
+</div>
 <input type="text" [(ngModel)]="name" name="" id="">{{name}}

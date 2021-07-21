@@ -37,3 +37,5 @@ Fuentes:
 + https://www.toptal.com/ruby/api-with-sinatra-and-sequel-ruby-tutorial
 + https://stackoverflow.com/questions/14486551/before-filter-in-sinatra-subapplication
 + https://stackoverflow.com/questions/6317980/you-have-already-activated-x-but-your-gemfile-requires-y
++ https://stackoverflow.com/questions/43991306/angular-4-5-6-global-variables
++ https://www.itsolutionstuff.com/post/how-to-declare-global-variable-in-angular-8example.html

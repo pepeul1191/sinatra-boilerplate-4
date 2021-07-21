@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import{ GlobalConstants } from '../common/global-constants';
 
 @Component({
   selector: 'app-home',
@@ -33,12 +34,14 @@ export class HomeComponent implements OnInit {
     "text-danger": this.hasError,
     "text-special": this.isSpecial,
   };
+  public color = 'blue';
   public greeting = 'hola';
   public titleStyles = {
     color: 'blue',
     fontStyle: 'italic',
     fontSize: '60px',
   };
+  public displayName = true;
 
   public phones = [
     {
@@ -67,9 +70,14 @@ export class HomeComponent implements OnInit {
   public onClick(event: Event){
     console.log(event);
     this.greeting = this.greeting + ' pepe';
+    this.displayName = !this.displayName;
   }
 
   public logMessage(message: String){
     alert(message);
+  }
+
+  public testConstants(){
+    console.log(GlobalConstants.baseURL)
   }
 }

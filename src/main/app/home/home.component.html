@@ -7,8 +7,11 @@
   </li>
 </ul>
 <h5 class="text-success">Saludos a {{saludar('Pepe')}}</h5>
-<input [class]="[successClass, 'text-special']" type="text" name="" [disabled]="false" [id]="txtId" value="XD">
+<input [class]="[successClass, 'text-special']" type="text" name="" [disabled]="false" [id]="txtId" value="XD" #myInput>
 <h4 [class.text-danger]="hasError">aprendiendo más cosas</h4>
 <h4 [ngClass]="messageClass">aprendiendo más cosas</h4>
 <h4 [style.color]="hasError ? 'red' : 'green'" [style.fontSize]="'40px'">aprendiendo más cosas</h4>
 <h4 [ngStyle]="titleStyles">aprendiendo más cosas</h4>
+<button (click)="onClick($event)" class="btn btn-success">Hola {{greeting}}</button>
+<button (click)="logMessage(myInput.value)" class="btn btn-warning">Alerta!!!</button>
+<input type="text" [(ngModel)]="name" name="" id="">{{name}}

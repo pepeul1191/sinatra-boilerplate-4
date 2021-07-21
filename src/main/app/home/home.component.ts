@@ -26,12 +26,14 @@ export class HomeComponent implements OnInit {
   public txtId = 'txtName';
   public successClass = "text-success";
   public hasError = true;
+  public name = '';
   public isSpecial = true;
   public messageClass = {
     "text-success": !this.hasError,
     "text-danger": this.hasError,
     "text-special": this.isSpecial,
   };
+  public greeting = 'hola';
   public titleStyles = {
     color: 'blue',
     fontStyle: 'italic',
@@ -60,5 +62,14 @@ export class HomeComponent implements OnInit {
 
   saludar(name : String): String{
     return `hola ${name}`;
+  }
+
+  public onClick(event: Event){
+    console.log(event);
+    this.greeting = this.greeting + ' pepe';
+  }
+
+  public logMessage(message: String){
+    alert(message);
   }
 }

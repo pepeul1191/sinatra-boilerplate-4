@@ -8,6 +8,7 @@ import{ GlobalConstants } from './common/global-constants';
 })
 export class AppComponent {
   title = 'Angular App in Sinatra';
-  name = 'pepe';
+  public name = 'pepe';
+  public message = "";
   constants = GlobalConstants;
 }

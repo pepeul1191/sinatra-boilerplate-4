@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
 import{ GlobalConstants } from '../common/global-constants';
+import { EmployeeService } from '../employee.service';
 
 @Component({
   selector: 'app-home',
@@ -23,6 +24,8 @@ import{ GlobalConstants } from '../common/global-constants';
 })
 export class HomeComponent implements OnInit {
   public title = 'aprendiendo';
+  @Input() public parentData;
+  @Output() public childEvent = new EventEmitter(); 
   public dateToday = new String();
   public txtId = 'txtName';
   public successClass = "text-success";
@@ -41,6 +44,7 @@ export class HomeComponent implements OnInit {
     fontStyle: 'italic',
     fontSize: '60px',
   };
+  public employees = Array<{id: number, name: string}>();
   public displayName = true;
 
   public phones = [
@@ -56,15 +60,21 @@ export class HomeComponent implements OnInit {
     }
   ];
 
-  constructor() { 
+  constructor(private _employeeService: EmployeeService) { 
     this.dateToday = new Date().toJSON().slice(0,10).replace(/-/g,'/');
+    this.parentData = "";
   }
 
   ngOnInit(): void {
+    this.employees = this._employeeService.getAll();
   }
 
   saludar(name : String): String{
     return `hola ${name}`;
+  }
+
+  public sendParentOutput(data: String){
+    this.childEvent.emit(`el hijo dice ${data}`);
   }
 
   public onClick(event: Event){

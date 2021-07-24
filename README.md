@@ -19,6 +19,10 @@ Generar componente
 
     $ ng generate component <nombre>
 
+Generar un service
+
+    $ ng g s <nombre>
+
 ---
 
 Fuentes:

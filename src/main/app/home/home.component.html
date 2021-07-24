@@ -7,6 +7,13 @@
     <p>{{phone.snippet}} {{l}}</p>
   </li>
 </ul>
+<ul>
+  <li *ngFor="let employee of employees; index as i; first as f; last as l ">
+    <span>#{{i + 1}} {{f}}</span>
+    <span>{{employee.id}}</span>
+    <p>{{employee.name}} {{l}}</p>
+  </li>
+</ul>
 <h5 class="text-success">Saludos a {{saludar('Pepe')}}</h5>
 <input [class]="[successClass, 'text-special']" type="text" name="" [disabled]="false" [id]="txtId" value="XD" #myInput>
 <h4 [class.text-danger]="hasError">aprendiendo más cosas</h4>
@@ -29,4 +36,6 @@
   <div *ngSwitchCase="'blue'">Has escogido color azul</div>
   <div *ngSwitchCase="'green'">Has escogido color verde</div>
 </div>
+<label for="">Parent Data {{'parentData'}}</label><br>
+<button class="btn btn-primary" (click)="sendParentOutput('saludos')">enviar al padre</button><br>
 <input type="text" [(ngModel)]="name" name="" id="">{{name}}

@@ -1,8 +1,8 @@
 <h1>{{ title }}</h1>
+<h2>{{ message }}</h2>
 Nothing here {{'yet ' + name + '!'}}
 <a href="/#/instagram" style="padding: 3px; padding-top: 1px; color: #DD2A7B !important;">
   <i class="fa fa-instagram" aria-hidden="true"></i>
 </a>
-<app-home>
-</app-home>
+<app-home [parentData]="name" (childEvent)="message=$event"></app-home>
 <p>Total number of phones: 2</p>

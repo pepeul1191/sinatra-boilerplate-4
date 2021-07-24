@@ -1,6 +1,7 @@
 import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
 import{ GlobalConstants } from '../common/global-constants';
 import { EmployeeService } from '../employee.service';
+import { IEmployee } from '../models/employee';
 
 @Component({
   selector: 'app-home',
@@ -44,8 +45,9 @@ export class HomeComponent implements OnInit {
     fontStyle: 'italic',
     fontSize: '60px',
   };
-  public employees = Array<{id: number, name: string}>();
+  public employees = Array<IEmployee>();
   public displayName = true;
+  public messageError = '';
 
   public phones = [
     {
@@ -66,7 +68,18 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.employees = this._employeeService.getAll();
+    this._employeeService.getAll()
+      .subscribe(
+        data => {
+          console.log(data);
+          this.employees = data;
+          console.log(this.employees);
+        },
+        error => {
+          console.log(error)
+          this.messageError = error.text[0];
+        },
+      );
   }
 
   saludar(name : String): String{

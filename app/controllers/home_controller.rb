@@ -23,4 +23,20 @@ class HomeController < ApplicationController
   get '/distritos' do
     District.all.to_a.to_json
   end  
+
+  get '/employee/list' do
+    resp = []
+    status = 200
+    begin
+      resp = Employee.limit(10).to_a
+    rescue Exception => e
+      status = 500
+      resp = [
+        'Se ha producido un error en listar los permisos del sistema',
+        e.message,
+      ]
+    end
+    status status
+    resp.to_json
+  end  
 end

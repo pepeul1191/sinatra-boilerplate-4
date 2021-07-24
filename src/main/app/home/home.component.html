@@ -8,12 +8,13 @@
   </li>
 </ul>
 <ul>
-  <li *ngFor="let employee of employees; index as i; first as f; last as l ">
-    <span>#{{i + 1}} {{f}}</span>
-    <span>{{employee.id}}</span>
-    <p>{{employee.name}} {{l}}</p>
+  <li *ngFor="let employee of employees; ">
+    <span># {{employee.id}}</span>
+    <span> {{employee.names}}</span>
+    <p>{{employee.last_names}}</p>
   </li>
 </ul>
+<p><b>{{messageError}}</b></p>
 <h5 class="text-success">Saludos a {{saludar('Pepe')}}</h5>
 <input [class]="[successClass, 'text-special']" type="text" name="" [disabled]="false" [id]="txtId" value="XD" #myInput>
 <h4 [class.text-danger]="hasError">aprendiendo más cosas</h4>

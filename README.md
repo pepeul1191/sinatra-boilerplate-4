@@ -43,3 +43,5 @@ Fuentes:
 + https://stackoverflow.com/questions/6317980/you-have-already-activated-x-but-your-gemfile-requires-y
 + https://stackoverflow.com/questions/43991306/angular-4-5-6-global-variables
 + https://www.itsolutionstuff.com/post/how-to-declare-global-variable-in-angular-8example.html
++ https://stackoverflow.com/questions/40905499/where-to-put-interfaces-and-type-aliases
++ https://stackoverflow.com/questions/50291570/module-not-found-error-cant-resolve-rxjs-add-operator-catch-in-f-angular

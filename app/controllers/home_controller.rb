@@ -9,20 +9,30 @@ class HomeController < ApplicationController
   before '/' do
     puts 'before2'
   end
+  ['/', '/about-us', '/help', '/department', '/department/([\w]+)',].each do |path|
+    get path do
+      locals = {
+        :title => 'Bienvenido',
+        :href => '/',
+        :csss => HomeHelper::index_css(settings.constants),
+        :jss => HomeHelper::index_js(settings.constants),
+      }
+      erb :'home/index', :layout => :'layouts/blank', :locals => locals
+    end  
+  end
 
-  get '/' do
-    locals = {
-      :title => 'Bienvenido',
-      :href => '/',
-      :csss => HomeHelper::index_css(settings.constants),
-      :jss => HomeHelper::index_js(settings.constants),
-    }
-    erb :'home/index', :layout => :'layouts/blank', :locals => locals
-  end  
+  get '/department/list' do
+    Department.all.to_a.to_json
+  end
+
+  get '/department/get' do
+    id = params[:id]
+    Department.where(id: id).to_a[0].to_json
+  end
 
   get '/distritos' do
     District.all.to_a.to_json
-  end  
+  end
 
   get '/employee/list' do
     resp = []
@@ -38,5 +48,9 @@ class HomeController < ApplicationController
     end
     status status
     resp.to_json
-  end  
+  end 
+
+  post '/department/edit' do
+    puts params[:id]
+  end
 end

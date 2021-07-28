@@ -17,11 +17,19 @@ Solucionar error con rake
 
 Generar componente
 
-    $ ng generate component <nombre>
+    $ ng g c <nombre>
+
+Generar componente sin template ni estilos
+
+    $ ng g c <nombre> -is -it
 
 Generar un service
 
     $ ng g s <nombre>
+
+Git
+
+    $ git push origin angular:angular
 
 ---
 

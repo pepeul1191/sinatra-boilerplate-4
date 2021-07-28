@@ -1,0 +1,7 @@
+<p>department-detail works!?</p>
+<form>
+  <label for="">nombre</label>
+  <input type="hidden" [(ngModel)]="department.id" name="id"  id="">
+  <input type="text" [(ngModel)]="department.nombre" name="nombre" [ngModelOptions]="{standalone: true}" id="">
+  <button (click)="edit()">Grabar</button>
+</form>
